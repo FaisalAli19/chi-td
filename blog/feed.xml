@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Chi Blog</title>
+        <title>CHI Blog</title>
         <link>https://faisalali19.github.io//chi-td/blog</link>
-        <description>The best place to stay up-to-date with the latest Chi news and events.</description>
+        <description>The best place to stay up-to-date with the latest CHI news and events.</description>
         <lastBuildDate>Tue, 24 Oct 2017 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>Chi Blog</title>
-            <url>https://faisalali19.github.io//chi-td/img/docusaurus.svg</url>
+            <title>CHI Blog</title>
+            <url>https://faisalali19.github.io//chi-td/img/logo-black.png</url>
             <link>https://faisalali19.github.io//chi-td/blog</link>
         </image>
         <copyright>Copyright © 2019 Your Name or Your Company Name</copyright>

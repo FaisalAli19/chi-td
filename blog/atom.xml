@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://faisalali19.github.io//chi-td/blog</id>
-    <title>Chi Blog</title>
+    <title>CHI Blog</title>
     <updated>2017-10-24T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://faisalali19.github.io//chi-td/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest Chi news and events.</subtitle>
-    <logo>https://faisalali19.github.io//chi-td/img/docusaurus.svg</logo>
+    <subtitle>The best place to stay up-to-date with the latest CHI news and events.</subtitle>
+    <logo>https://faisalali19.github.io//chi-td/img/logo-black.png</logo>
     <rights>Copyright © 2019 Your Name or Your Company Name</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
