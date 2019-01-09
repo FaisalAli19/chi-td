@@ -4,12 +4,66 @@ title: Directory Structure
 sidebar_label: Directory Structure
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet. Proin sodales ornare turpis, non mollis massa ultricies id. Nam at nibh scelerisque, feugiat ante non, dapibus tortor. Vivamus volutpat diam quis tellus elementum bibendum. Praesent semper gravida velit quis aliquam. Etiam in cursus neque. Nam lectus ligula, malesuada et mauris a, bibendum faucibus mi. Phasellus ut interdum felis. Phasellus in odio pulvinar, porttitor urna eget, fringilla lectus. Aliquam sollicitudin est eros. Mauris consectetur quam vitae mauris interdum hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+VuePress follows the principle of **"Convention is better than configuration"**, the recommended document structure is as follows:
 
-Duis et egestas libero, imperdiet faucibus ipsum. Sed posuere eget urna vel feugiat. Vivamus a arcu sagittis, fermentum urna dapibus, congue lectus. Fusce vulputate porttitor nisl, ac cursus elit volutpat vitae. Nullam vitae ipsum egestas, convallis quam non, porta nibh. Morbi gravida erat nec neque bibendum, eu pellentesque velit posuere. Fusce aliquam erat eu massa eleifend tristique.
+```
+.
+├── docs
+│   ├── .vuepress _(**Optional**)_
+│   │   ├── `components` _(**Optional**)_
+│   │   ├── `theme` _(**Optional**)_
+│   │   │   └── Layout.vue
+│   │   ├── `public` _(**Optional**)_
+│   │   ├── `styles` _(**Optional**)_
+│   │   │   ├── index.styl
+│   │   │   └── palette.styl
+│   │   ├── `templates` _(**Optional, Danger Zone**)_
+│   │   │   ├── dev.html
+│   │   │   └── ssr.html
+│   │   ├── `config.js` _(**Optional**)_
+│   │   └── `enhanceApp.js` _(**Optional**)_
+│   │
+│   ├── README.md
+│   ├── guide
+│   │   └── README.md
+│   └── config.md
+│
+└── package.json
+```
 
-Sed consequat sollicitudin ipsum eget tempus. Integer a aliquet velit. In justo nibh, pellentesque non suscipit eget, gravida vel lacus. Donec odio ante, malesuada in massa quis, pharetra tristique ligula. Donec eros est, tristique eget finibus quis, semper non nisl. Vivamus et elit nec enim ornare placerat. Sed posuere odio a elit cursus sagittis.
+::: warning Note
+Please note the capitalization of the directory name.
+:::
 
-Phasellus feugiat purus eu tortor ultrices finibus. Ut libero nibh, lobortis et libero nec, dapibus posuere eros. Sed sagittis euismod justo at consectetur. Nulla finibus libero placerat, cursus sapien at, eleifend ligula. Vivamus elit nisl, hendrerit ac nibh eu, ultrices tempus dui. Nam tellus neque, commodo non rhoncus eu, gravida in risus. Nullam id iaculis tortor.
+- `docs/.vuepress`: It is used to store global configuration, components, static resources, etc.
+- `docs/.vuepress/components`: The Vue components in this directory will be automatically registered as global components.
+- `docs/.vuepress/theme`: Used to store local theme.
+- `docs/.vuepress/styles`: Stores style related files.
+- `docs/.vuepress/styles/index.styl`: Automatically applied global style files, generated at the ending of the CSS file, have a higher priority than the default style.
+- `docs/.vuepress/styles/palette.styl`: The palette is used to override the default color constants and to set the color constants of Stylus.
+- `docs/.vuepress/public`: Static resource directory.
+- `docs/.vuepress/templates`: Store HTML template files.
+- `docs/.vuepress/templates/dev.html`: HTML template file for development environment.
+- `docs/.vuepress/templates/ssr.html`: Vue SSR based HTML template file in the built time.
+- `docs/.vuepress/config.js`: Entry file of configuration, can also be `yml` or `toml`.
+- `docs/.vuepress/enhanceApp.js`: App level enhancement.
 
-Nullam at odio in sem varius tempor sit amet vel lorem. Etiam eu hendrerit nisl. Fusce nibh mauris, vulputate sit amet ex vitae, congue rhoncus nisl. Sed eget tellus purus. Nullam tempus commodo erat ut tristique. Cras accumsan massa sit amet justo consequat eleifend. Integer scelerisque vitae tellus id consectetur.
+::: warning Note
+When customizing `templates/ssr.html`, or `templates/dev.html`, it is best to modify it on the basis of the [default template files](https://github.com/vuejs/vuepress/blob/master/packages/%40vuepress/core/lib/app/index.dev.html), otherwise it may cause a build failure.
+:::
+
+## Default Page Routing
+
+For the above directory structure, the default page routing paths are as follows:
+
+| Relative Path      | Page Routing   |
+| ------------------ | -------------- |
+| `/README.md`       | `/`            |
+| `/guide/README.md` | `/guide/`      |
+| `/config.md`       | `/config.html` |
+
+**Also see:**
+
+- [Config](../config/README.md)
+- [Theme](../theme/README.md)
+- [Default Theme Config](../theme/default-theme-config.md)
