@@ -4,10 +4,9 @@
       "introduction",
       "getting-started",
       "directory-structure",
-      "configuration",
       "routes"
     ],
-    "Features": [],
+    "Implementation": ["code-flow", "functionality", "best-practices"],
     "API": ["api"],
     "Packages": ["packages"]
   }

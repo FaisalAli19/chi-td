@@ -1205,3 +1205,880 @@ Used to update a block using its id and action.
   "err": ["Not Found"]
 }
 ```
+
+## Discussions List
+
+Used to get a list of discussions of a given type.
+
+**URL** : `/api/discussions/:type`
+
+**Method** : `GET`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{
+  "type": "all"
+}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+[
+  {
+    "_id": "5bd80fdc1e639148b869b191",
+    "course": {
+      "_id": "5bd80e841e639148b869b189",
+      "title": "This is a new course",
+      "slug": "B1pYCFH27-this-is-a-new-course",
+      "text": {
+        "about": "This is an awesome course.",
+        "tagline": "Awesome course"
+      }
+    },
+    "slug": "Syr1g9B2Q-dummy",
+    "type": "file",
+    "title": "dummy",
+    "creator": {
+      "_id": "5bd80bab1e639148b869b187",
+      "username": "H1NhiKr2m",
+      "initials": "JD",
+      "name": "John Doe"
+    },
+    "updated_at": "2018-10-30T08:01:32.687Z",
+    "count": { "members": 0, "comments": 0 },
+    "comments": [],
+    "is_restricted": false,
+    "privacy": "public",
+    "created_at": "2018-10-30T08:01:32.688Z",
+    "groups": [],
+    "has_voted": false,
+    "polls": [],
+    "file": { "size": 509, "ext": "txt" },
+    "provider": { "name": "CHI", "url": "" }
+  }
+]
+```
+
+**Error Response**
+
+**Condition** : If type is invalid.
+
+**Code** : `400 BAD REQUEST`
+
+**Content** :
+
+```json
+{
+  "err": ["Bad request error"]
+}
+```
+
+## Discussion Page
+
+Used to get a discussion using its id.
+
+**URL** : `/api/discussion/:_id`
+
+**Method** : `GET`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{
+  "_id": "5bd87654334323443"
+}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "_id": "5bd80fdc1e639148b869b191",
+  "course": {
+    "_id": "5bd80e841e639148b869b189",
+    "title": "This is a new course",
+    "slug": "B1pYCFH27-this-is-a-new-course",
+    "text": {
+      "about": "This is an awesome course.",
+      "tagline": "Awesome course"
+    }
+  },
+  "slug": "Syr1g9B2Q-dummy",
+  "type": "file",
+  "title": "dummy",
+  "creator": {
+    "_id": "5bd80bab1e639148b869b187",
+    "username": "H1NhiKr2m",
+    "initials": "JD",
+    "name": "John Doe"
+  },
+  "updated_at": "2018-10-30T08:01:32.687Z",
+  "count": { "members": 0, "comments": 0 },
+  "comments": [],
+  "is_restricted": false,
+  "privacy": "public",
+  "created_at": "2018-10-30T08:01:32.688Z",
+  "groups": [],
+  "has_voted": false,
+  "polls": [],
+  "file": { "size": 509, "ext": "txt" },
+  "provider": { "name": "CHI", "url": "" }
+}
+```
+
+**Error Response**
+
+**Condition** : If \_id is invalid.
+
+**Code** : `404 Not Found`
+
+**Content** :
+
+```json
+{
+  "err": ["Not Found"]
+}
+```
+
+## Discussion Actions
+
+Used to update a discussion using its id and action.
+
+**URL** : `/api/discussion/:_id/:action`
+
+**Method** : `PUT`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{
+  "_id": "5bd87654334323443",
+  "action": "edit",
+  "title": "discussion title changed"
+}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "_id": "5bd80fdc1e639148b869b191",
+  "course": {
+    "_id": "5bd80e841e639148b869b189",
+    "title": "This is a new course",
+    "slug": "B1pYCFH27-this-is-a-new-course",
+    "text": {
+      "about": "This is an awesome course.",
+      "tagline": "Awesome course"
+    }
+  },
+  "slug": "Syr1g9B2Q-dummy",
+  "type": "file",
+  "title": "discussion title changed",
+  "creator": {
+    "_id": "5bd80bab1e639148b869b187",
+    "username": "H1NhiKr2m",
+    "initials": "JD",
+    "name": "John Doe"
+  },
+  "updated_at": "2018-10-30T08:01:32.687Z",
+  "count": { "members": 0, "comments": 0 },
+  "comments": [],
+  "is_restricted": false,
+  "privacy": "public",
+  "created_at": "2018-10-30T08:01:32.688Z",
+  "groups": [],
+  "has_voted": false,
+  "polls": [],
+  "file": { "size": 509, "ext": "txt" },
+  "provider": { "name": "CHI", "url": "" }
+}
+```
+
+**Error Response**
+
+**Condition** : If \_id is invalid.
+
+**Code** : `404 Not Found`
+
+**Content** :
+
+```json
+{
+  "err": ["Not Found"]
+}
+```
+
+## Comment
+
+To add a new comment.
+
+**URL** : `/api/comment/:_id`
+
+**Method** : `POST`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{
+  "discussion_id": "5bfbc44c5f558a48477bcfe0",
+  "comment": "Hello"
+}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "_id": "5bfbc4595f558a48477bcfe1",
+  "updated_at": "2018-11-26T10:00:57.888Z",
+  "creator": {
+    "_id": "5bfbbf435f558a48477bcf5c",
+    "username": "rynHJrK07",
+    "initials": "JD",
+    "name": "John Doe",
+    "job": { "org": "", "title": "" }
+  },
+  "comment": "Hello",
+  "created_at": "2018-11-26T10:00:57.888Z",
+  "likes": ["5bfbbf435f558a48477bcf5c"]
+}
+```
+
+**Error Response**
+
+**Condition** : If discussion_id is invalid.
+
+**Code** : `404 Not Found`
+
+**Content** :
+
+```json
+{
+  "err": ["Not Found"]
+}
+```
+
+## Comment Actions
+
+Used to update a comment using action.
+
+**URL** : `/api/comment/:_id/:action`
+
+**Method** : `PUT`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{
+  "_id": "5bfbc4595f558a48477bcfe1",
+  "action": "edit",
+  "comment": "comment changed"
+}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "_id": "5bfbc4595f558a48477bcfe1",
+  "updated_at": "2018-11-26T10:00:57.888Z",
+  "creator": {
+    "_id": "5bfbbf435f558a48477bcf5c",
+    "username": "rynHJrK07",
+    "initials": "JD",
+    "name": "John Doe",
+    "job": { "org": "", "title": "" }
+  },
+  "comment": "comment changed",
+  "created_at": "2018-11-26T10:00:57.888Z",
+  "likes": ["5bfbbf435f558a48477bcf5c"]
+}
+```
+
+**Error Response**
+
+**Condition** : If \_id is invalid.
+
+**Code** : `404 Not Found`
+
+**Content** :
+
+```json
+{
+  "err": ["Not Found"]
+}
+```
+
+## Current User
+
+Used to get logged in user's details.
+
+**URL** : `/api/me`
+
+**Method** : `GET`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "is_local": true,
+  "_id": "5bd971341e639148b869b1e5",
+  "username": "BypE-gv27",
+  "initials": "JD",
+  "name": "John Doe",
+  "password": "",
+  "email": "john.doe@example.com",
+  "__v": 0,
+  "theme": "dark",
+  "accountCreated": "2018-10-31T09:09:08.818Z",
+  "anon": { "name": "Mark", "id": "SkgTVWgPh7" },
+  "karma": 10,
+  "type": "normal"
+}
+```
+
+## User Details
+
+Used to get user details by id.
+
+**URL** : `/api/user/:_id`
+
+**Method** : `GET`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{
+  "_id": "5bd971341e639148b869b1e5"
+}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "_id": "5bd971341e639148b869b1e5",
+  "username": "BypE-gv27",
+  "initials": "JD",
+  "name": "John Doe",
+  "accountCreated": "2018-10-31T09:09:08.818Z",
+  "karma": 10
+}
+```
+
+## Learner Dashboard
+
+Used to get user learner analytics data.
+
+**URL** : `/api/dashboard/learner`
+
+**Method** : `GET`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "nlu": [
+    {
+      "_id": "5c062f30131ed805e958fa86",
+      "creator": "5be8f2c6d30da1044296b538",
+      "type": "audio",
+      "sourceType": "lesson",
+      "sourceId": "5be8f35ed30da1044296b53c",
+      "answerId": "5c062f28131ed805e958fa85",
+      "blockId": "5be8f3bbd30da1044296b53f",
+      "__v": 0,
+      "emotions": {
+        "sadness": 0,
+        "joy": 0,
+        "fear": 0,
+        "disgust": 0,
+        "anger": 0
+      },
+      "sentiment": {
+        "score": 0.52252,
+        "label": "positive"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "_id": "5be8f3bbd30da1044296b53f",
+      "text": "Record your view on this topic in audio",
+      "slug": "r17pQOU6X",
+      "type": "journal",
+      "page": "5be8f362d30da1044296b53d",
+      "title": "Record you view",
+      "journal_type": "audio",
+      "creator": "5be8f2c6d30da1044296b538",
+      "updated_at": "2018-11-12T03:30:03.437Z",
+      "optionsB": [],
+      "optionsA": [],
+      "__v": 10,
+      "created_at": "2018-11-12T03:30:03.437Z",
+      "todos": [],
+      "shape": {
+        "size": 1
+      },
+      "is_chat": false,
+      "answers": [
+        {
+          "_id": "5c062f28131ed805e958fa85",
+          "creator": "5be8f2c6d30da1044296b538",
+          "created_at": "2018-12-04T07:39:20.493Z",
+          "provider": {
+            "url": "",
+            "name": "CHI"
+          },
+          "file": {
+            "ext": "webm",
+            "size": 11706
+          }
+        }
+      ],
+      "is_draggable": false,
+      "options": [],
+      "fills": [],
+      "is_multiple": false,
+      "mcqs": [],
+      "images": [],
+      "order": 1
+    }
+  ],
+  "users": {
+    "_id": "5be8f2c6d30da1044296b538",
+    "username": "B1yCf_L6X",
+    "initials": "JD",
+    "name": "John Doe",
+    "email": "johndoe@example.co",
+    "__v": 0,
+    "about": "",
+    "city": "",
+    "country": "India",
+    "phone": null,
+    "theme": "dark",
+    "loginAttempts": 0,
+    "accountCreated": "2018-11-12T03:25:59.128Z",
+    "job": {
+      "org": "",
+      "title": ""
+    },
+    "anon": {
+      "name": "Hannah",
+      "id": "S1lk0G_U6m"
+    },
+    "karma": 10,
+    "type": "normal"
+  },
+  "lessons": [
+    {
+      "_id": "5be8f35ed30da1044296b53c",
+      "title": "Analytic Lesson"
+    }
+  ],
+  "wordCloud": {
+    "_id": "5be93cbb04d9110914688751",
+    "user": "5be8f2c6d30da1044296b538",
+    "__v": 0,
+    "global_data": [
+      {
+        "relevance": 0.960949,
+        "text": "awesome people",
+        "_id": "5c1b63f0a9af1b0758f2fb99",
+        "emotion": {
+          "anger": 0.003333,
+          "disgust": 0.004936,
+          "fear": 0.01961,
+          "joy": 0.944444,
+          "sadness": 0.025886
+        },
+        "sentiment": {
+          "label": "positive",
+          "score": 0.99789
+        }
+      }
+    ]
+  }
+}
+```
+
+## Creator's Dashboard
+
+Used to get user creator's analytics data.
+
+**URL** : `/api/dashboard/:type/:id`
+
+**Method** : `GET`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{
+  "type": "all",
+  "id": "all"
+}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "nlu": [
+    {
+      "_id": "5c062f30131ed805e958fa86",
+      "creator": "5be8f2c6d30da1044296b538",
+      "type": "audio",
+      "sourceType": "lesson",
+      "sourceId": "5be8f35ed30da1044296b53c",
+      "answerId": "5c062f28131ed805e958fa85",
+      "blockId": "5be8f3bbd30da1044296b53f",
+      "__v": 0,
+      "emotions": {
+        "sadness": 0,
+        "joy": 0,
+        "fear": 0,
+        "disgust": 0,
+        "anger": 0
+      },
+      "sentiment": {
+        "score": 0.52252,
+        "label": "positive"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "_id": "5be8f3bbd30da1044296b53f",
+      "text": "Record your view on this topic in audio",
+      "slug": "r17pQOU6X",
+      "type": "journal",
+      "page": "5be8f362d30da1044296b53d",
+      "title": "Record you view",
+      "journal_type": "audio",
+      "creator": "5be8f2c6d30da1044296b538",
+      "updated_at": "2018-11-12T03:30:03.437Z",
+      "optionsB": [],
+      "optionsA": [],
+      "__v": 10,
+      "created_at": "2018-11-12T03:30:03.437Z",
+      "todos": [],
+      "shape": {
+        "size": 1
+      },
+      "is_chat": false,
+      "answers": [
+        {
+          "_id": "5c062f28131ed805e958fa85",
+          "creator": "5be8f2c6d30da1044296b538",
+          "created_at": "2018-12-04T07:39:20.493Z",
+          "provider": {
+            "url": "",
+            "name": "CHI"
+          },
+          "file": {
+            "ext": "webm",
+            "size": 11706
+          }
+        }
+      ],
+      "is_draggable": false,
+      "options": [],
+      "fills": [],
+      "is_multiple": false,
+      "mcqs": [],
+      "images": [],
+      "order": 1
+    }
+  ],
+  "users": [
+    {
+      "_id": "5be8f2c6d30da1044296b538",
+      "username": "B1yCf_L6X",
+      "initials": "JD",
+      "name": "John Doe",
+      "email": "johndoe@example.co",
+      "__v": 0,
+      "about": "",
+      "city": "",
+      "country": "India",
+      "phone": null,
+      "theme": "dark",
+      "loginAttempts": 0,
+      "accountCreated": "2018-11-12T03:25:59.128Z",
+      "job": {
+        "org": "",
+        "title": ""
+      },
+      "anon": {
+        "name": "Hannah",
+        "id": "S1lk0G_U6m"
+      },
+      "karma": 10,
+      "type": "normal"
+    }
+  ],
+  "lessons": [
+    {
+      "_id": "5be8f35ed30da1044296b53c",
+      "title": "Analytic Lesson"
+    }
+  ],
+  "wordCloud": {
+    "_id": "5be93cbb04d9110914688751",
+    "user": "5be8f2c6d30da1044296b538",
+    "__v": 0,
+    "global_data": [
+      {
+        "relevance": 0.960949,
+        "text": "awesome people",
+        "_id": "5c1b63f0a9af1b0758f2fb99",
+        "emotion": {
+          "anger": 0.003333,
+          "disgust": 0.004936,
+          "fear": 0.01961,
+          "joy": 0.944444,
+          "sadness": 0.025886
+        },
+        "sentiment": {
+          "label": "positive",
+          "score": 0.99789
+        }
+      }
+    ]
+  }
+}
+```
+
+## Dashboard Filters
+
+Used to get user creator analytics filtered data.
+
+**URL** : `/api/dashboard/filter/:type/:id`
+
+**Method** : `GET`
+
+**Auth required** : Yes
+
+**Data example**
+
+```json
+{
+  "type": "user",
+  "id": "5be8f2c6d30da1044296b538"
+}
+```
+
+**Success Response**
+
+**Code** : `200 OK`
+
+**Content example**
+
+```json
+{
+  "nlu": [
+    {
+      "_id": "5c062f30131ed805e958fa86",
+      "creator": "5be8f2c6d30da1044296b538",
+      "type": "audio",
+      "sourceType": "lesson",
+      "sourceId": "5be8f35ed30da1044296b53c",
+      "answerId": "5c062f28131ed805e958fa85",
+      "blockId": "5be8f3bbd30da1044296b53f",
+      "__v": 0,
+      "emotions": {
+        "sadness": 0,
+        "joy": 0,
+        "fear": 0,
+        "disgust": 0,
+        "anger": 0
+      },
+      "sentiment": {
+        "score": 0.52252,
+        "label": "positive"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "_id": "5be8f3bbd30da1044296b53f",
+      "text": "Record your view on this topic in audio",
+      "slug": "r17pQOU6X",
+      "type": "journal",
+      "page": "5be8f362d30da1044296b53d",
+      "title": "Record you view",
+      "journal_type": "audio",
+      "creator": "5be8f2c6d30da1044296b538",
+      "updated_at": "2018-11-12T03:30:03.437Z",
+      "optionsB": [],
+      "optionsA": [],
+      "__v": 10,
+      "created_at": "2018-11-12T03:30:03.437Z",
+      "todos": [],
+      "shape": {
+        "size": 1
+      },
+      "is_chat": false,
+      "answers": [
+        {
+          "_id": "5c062f28131ed805e958fa85",
+          "creator": "5be8f2c6d30da1044296b538",
+          "created_at": "2018-12-04T07:39:20.493Z",
+          "provider": {
+            "url": "",
+            "name": "CHI"
+          },
+          "file": {
+            "ext": "webm",
+            "size": 11706
+          }
+        }
+      ],
+      "is_draggable": false,
+      "options": [],
+      "fills": [],
+      "is_multiple": false,
+      "mcqs": [],
+      "images": [],
+      "order": 1
+    }
+  ],
+  "users": {
+    "_id": "5be8f2c6d30da1044296b538",
+    "username": "B1yCf_L6X",
+    "initials": "JD",
+    "name": "John Doe",
+    "email": "johndoe@example.co",
+    "__v": 0,
+    "about": "",
+    "city": "",
+    "country": "India",
+    "phone": null,
+    "theme": "dark",
+    "loginAttempts": 0,
+    "accountCreated": "2018-11-12T03:25:59.128Z",
+    "job": {
+      "org": "",
+      "title": ""
+    },
+    "anon": {
+      "name": "Hannah",
+      "id": "S1lk0G_U6m"
+    },
+    "karma": 10,
+    "type": "normal"
+  },
+  "lessons": [
+    {
+      "_id": "5be8f35ed30da1044296b53c",
+      "title": "Analytic Lesson"
+    }
+  ],
+  "wordCloud": {
+    "_id": "5be93cbb04d9110914688751",
+    "user": "5be8f2c6d30da1044296b538",
+    "__v": 0,
+    "global_data": [
+      {
+        "relevance": 0.960949,
+        "text": "awesome people",
+        "_id": "5c1b63f0a9af1b0758f2fb99",
+        "emotion": {
+          "anger": 0.003333,
+          "disgust": 0.004936,
+          "fear": 0.01961,
+          "joy": 0.944444,
+          "sadness": 0.025886
+        },
+        "sentiment": {
+          "label": "positive",
+          "score": 0.99789
+        }
+      }
+    ]
+  }
+}
+```
+
+**Error Response**
+
+**Condition** : If id is invalid.
+
+**Code** : `404 Not Found`
+
+**Content** :
+
+```json
+{
+  "err": ["Not Found"]
+}
+```
