@@ -5,8 +5,9 @@
       "getting-started",
       "directory-structure",
       "configuration",
-      "deploy"
+      "routes"
     ],
-    "Api": ["api"]
+    "Features": [],
+    "API": ["api"]
   }
 }
