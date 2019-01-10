@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Libraries and Packages · CHI</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;a href=&quot;https://github.com/caolan/async&quot;&gt;async&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Libraries and Packages · CHI"/><meta property="og:type" content="website"/><meta property="og:url" content="https://faisalali19.github.io//chi-td/index.html"/><meta property="og:description" content="&lt;p&gt;&lt;a href=&quot;https://github.com/caolan/async&quot;&gt;async&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
+"/><meta property="og:image" content="https://faisalali19.github.io//chi-td/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://faisalali19.github.io//chi-td/img/docusaurus.png"/><link rel="shortcut icon" href="/chi-td/img/logo-black.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/chi-td/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/chi-td/"><img class="logo" src="/chi-td/img/logo-black.png" alt="CHI"/><h2 class="headerTitleWithLogo">CHI</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/chi-td/docs/introduction" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/chi-td/docs/api" target="_self">API</a></li><li class=""><a href="/chi-td/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Packages</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Guide</h3><ul><li class="navListItem"><a class="navItem" href="/chi-td/docs/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/directory-structure">Directory Structure</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/routes">Routes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API</h3><ul><li class="navListItem"><a class="navItem" href="/chi-td/docs/api">Endpoints</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Packages</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/chi-td/docs/packages">Libraries</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Libraries and Packages</h1></header><article><div><span><p><a href="https://github.com/caolan/async">async</a> <br />
+<strong>async@0.9.0 | MIT | deps: none | versions: 79</strong> <br />
+Higher-order functions and common patterns for asynchronous code</p>
+<p><a href="https://github.com/aws/aws-sdk-js">Aws-sdk</a> <br />
+<strong>aws-sdk@2.5.3 | Apache-2.0 | deps: 4 | versions: 655</strong> <br />
+AWS SDK for JavaScript</p>
+<p><a href="https://github.com/dcodeIO/bcrypt.js">bcrypt</a> <br />
+<strong>bcryptjs@2.1.0 | MIT | deps: none | versions: 25</strong> <br />
+Optimized bcrypt in plain JavaScript with zero dependencies. Compatible to 'bcrypt'.</p>
+<p><a href="https://github.com/tanepiper/node-bitly">bitly</a> <br />
+<strong>bitly@5.0.12 | MIT | deps: 4 | versions: 111</strong> <br />
+A Bit.ly API library for Node.JS</p>
+<p><a href="https://github.com/petkaantonov/bluebird">bluebird</a> <br />
+<strong>bluebird@3.5.1 | MIT | deps: none | versions: 217</strong> <br />
+Full featured Promises/A+ implementation with exceptionally good performance</p>
+<p><a href="https://github.com/expressjs/body-parser">body-parser</a> <br />
+<strong>body-parser@1.10.1 | MIT | deps: 8 | versions: 64</strong> <br />
+Node.js body parsing middleware</p>
+<p><a href="http://chancejs.com">chance</a> <br />
+<strong>chance@1.0.16 | MIT | deps: none | versions: 53</strong> <br />
+Chance - Utility library to generate anything random</p>
+<p><a href="https://github.com/cheeriojs/cheerio">cheerio</a> <br />
+<strong>cheerio@0.18.0 | MIT | deps: 5 | versions: 59</strong> <br />
+Tiny, fast, and elegant implementation of core jQuery designed specifically for the server</p>
+<p><a href="https://github.com/Marak/colors.js">colors</a> <br />
+<strong>colors@1.0.3 | MIT | deps: none | versions: 25</strong> <br />
+get colors in your node.js console</p>
+<p><a href="https://github.com/expressjs/compression">compression</a> <br />
+<strong>compression@1.3.0 | MIT | deps: 6 | versions: 35</strong> <br />
+Compression middleware for connect and node.js</p>
+<p><strong>connect-flash</strong>
+<strong>connect-flash@0.1.1 | Proprietary | deps: none | versions: 2</strong> <br />
+Flash message middleware for Connect.</p>
+<p><a href="https://github.com/kcbanner/connect-mongo">connect-mongo</a> <br />
+<strong>connect-mongo@0.5.3 | MIT | deps: 3 | versions: 41</strong> <br />
+MongoDB session store for Express and Connect</p>
+<p><a href="https://github.com/avinoamr/connect-slashes">connect-slashes</a> <br />
+<strong>connect-slashes@1.3.0 | MIT | deps: none | versions: 9</strong> <br />
+Trailing slash redirect middleware for Connect and Express.js</p>
+<p><a href="https://github.com/expressjs/cookie-parser">cookie-parser</a> <br />
+<strong>cookie-parser@1.3.3 | MIT | deps: 2 | versions: 14</strong> <br />
+cookie parsing with signatures</p>
+<p><a href="https://github.com/scottmotte/dotenv">dotenv</a> <br />
+<strong>dotenv@0.4.0 | BSD | deps: none | versions: 34</strong> <br />
+Loads environment variables from .env</p>
+<p><a href="https://github.com/cgiffard/Downsize">downsize</a> <br />
+<strong>downsize@0.0.8 | BSD | deps: 1 | versions: 8</strong> <br />
+Tag-safe truncation for HTML and XML. Works by word!</p>
+<p><a href="https://github.com/embedly/embedly-node">embedly</a> <br />
+<strong>embedly@1.0.4 | Proprietary | deps: 4 | versions: 27</strong> <br />
+Embedly client library for node</p>
+<p><a href="http://expressjs.com/">express</a> <br />
+<strong>express@4.10.7 | MIT | deps: 24 | versions: 261</strong> <br />
+Fast, unopinionated, minimalist web framework</p>
+<p><a href="https://github.com/barc/express-hbs">express-hbs</a> <br />
+<strong>express-hbs@0.7.11 | MIT | deps: 3 | versions: 38</strong> <br />
+Express 3 handlebars template engine complete with multiple layouts, partials and blocks.</p>
+<p><a href="https://github.com/zeroEvidence/express-manifest">express-manifest</a> <br />
+<strong>express-manifest@0.1.1 | MIT | deps: 2 | versions: 2</strong> <br />
+Middleware which resolves requests based on generic filenames to the associated file fingerprint outlined in a manifest file.</p>
+<p><a href="https://github.com/SummerWish/express-minify">express-minify</a> <br />
+<strong>express-minify@1.0.0 | MIT | deps: 3 | versions: 20</strong> <br />
+Automatically minify and cache your javascript and css files.</p>
+<p><a href="https://github.com/expressjs/session">express-session</a> <br />
+<strong>express-session@1.10.0 | MIT | deps: 9 | versions: 56</strong> <br />
+Simple session middleware for Express</p>
+<p><a href="https://github.com/jprichardson/node-fs-extra">fs-extra</a> <br />
+<strong>fs-extra@0.14.0 | MIT | deps: 3 | versions: 83</strong> <br />
+fs-extra contains methods that aren't included in the vanilla Node.js fs package. Such as mkdir -p, cp -r, and rm -rf.</p>
+<p><a href="https://github.com/jcblw/node-giphy">giphy</a> <br />
+<strong>giphy@0.0.4 | MIT | deps: 1 | versions: 2</strong> <br />
+A simple wrapper around giphy's api</p>
+<p><a href="https://helmetjs.github.io/">helmet</a> <br />
+<strong>helmet@3.15.0 | MIT | deps: 14 | versions: 80</strong> <br />
+help secure Express/Connect apps with various HTTP headers</p>
+<p><a href="https://github.com/werk85/node-html-to-text">html-to-text</a> <br />
+<strong>html-to-text@2.1.3 | MIT | deps: 5 | versions: 33</strong> <br />
+Advanced html to plain text converter</p>
+<p><a href="https://github.com/fb55/htmlparser2">htmlparser2</a> <br />
+<strong>htmlparser2@3.8.2 | MIT | deps: 5 | versions: 58</strong> <br />
+Fast &amp; forgiving HTML/XML/RSS parser</p>
+<p><a href="https://github.com/SoapBox/linkifyjs#readme">linkifyjs</a> <br />
+<strong>linkifyjs@2.1.0 | MIT | deps: 3 | versions: 25</strong> <br />
+Intelligent link recognition, made easy</p>
+<p><a href="https://github.com/expressjs/method-override">method-override</a> <br />
+<strong>method-override@2.3.1 | MIT | deps: 4 | versions: 23</strong> <br />
+Override HTTP verbs</p>
+<p><a href="https://github.com/broofa/node-mime#readme">mime</a> <br />
+<strong>mime@1.2.11 | MIT | deps: none | versions: 35</strong> <br />
+A comprehensive library for mime-type mapping</p>
+<p><a href="https://github.com/mixpanel/mixpanel-node">mixpanel</a> <br />
+<strong>mixpanel@0.7.0 | MIT | deps: 1 | versions: 37</strong> <br />
+A simple server-side API for mixpanel</p>
+<p><a href="https://github.com/expressjs/morgan">morgan</a> <br />
+<strong>morgan@1.5.1 | MIT | deps: 4 | versions: 25</strong> <br />
+HTTP request logger middleware for node.js</p>
+<p><a href="https://github.com/expressjs/multer#readme">multer</a> <br />
+<strong>multer@1.3.0 | MIT | deps: 8 | versions: 35</strong> <br />
+Middleware for handling <code>multipart/form-data</code>.</p>
+<p><a href="https://github.com/broofa/node-uuid">node-uuid</a> <br />
+<strong>node-uuid@1.4.2 | Proprietary | deps: none | versions: 14</strong> <br />
+Rigorous implementation of RFC4122 (v1 and v4) UUIDs.</p>
+<p><a href="http://github.com/andris9/nodemailer">nodemailer</a> <br />
+<strong>nodemailer@0.7.1 | MIT | deps: 7 | versions: 214</strong> <br />
+Easy to use module to send e-mails, supports unicode and SSL/TLS</p>
+<p><a href="https://github.com/jaredhanson/oauth2orize#readme">oauth2orize</a> <br />
+<strong>oauth2orize@1.0.1 | MIT | deps: 3 | versions: 20</strong> <br />
+OAuth 2.0 authorization server toolkit for Node.js.</p>
+<p><a href="https://github.com/jaredhanson/passport-facebook#readme">passport-facebook</a> <br />
+<strong>passport-facebook@2.1.1 | MIT | deps: 1 | versions: 14</strong> <br />
+Facebook authentication strategy for Passport.</p>
+<p><a href="https://github.com/jaredhanson/passport-google-oauth#readme">passport-google-oauth</a> <br />
+<strong>passport-google-oauth@1.0.0 | MIT | deps: 2 | versions: 8</strong> <br />
+Google (OAuth) authentication strategies for Passport.</p>
+<p><a href="https://github.com/jaredhanson/passport-http">passport-http</a> <br />
+<strong>passport-http@0.2.2 | Proprietary | deps: 2 | versions: 9</strong> <br />
+HTTP Basic and Digest authentication strategies for Passport.</p>
+<p><a href="https://github.com/jaredhanson/passport-oauth2-client-password">passport-oauth2-client-password</a> <br />
+<strong>passport-oauth2-client-password@0.1.2 | Proprietary | deps: 1 | versions: 3</strong> <br />
+OAuth 2.0 client password authentication strategy for Passport.</p>
+<p><a href="https://github.com/jaredhanson/passport-twitter#readme">passport-twitter</a> <br />
+<strong>passport-twitter@1.0.4 | MIT | deps: 2 | versions: 11</strong> <br />
+Twitter authentication strategy for Passport.</p>
+<p><a href="https://github.com/request/request">request</a> <br />
+<strong>request@2.51.0 | Apache-2.0 | deps: 16 | versions: 125</strong> <br />
+Simplified HTTP request client.</p>
+<p><a href="https://github.com/apiaryio/s3-streaming-upload">s3-streaming-upload</a> <br />
+<strong>s3-streaming-upload@0.1.17 | Proprietary | deps: 3 | versions: 20</strong> <br />
+Streaming upload to S3</p>
+<p><a href="https://github.com/punkave/sanitize-html">sanitize-html</a> <br />
+<strong>sanitize-html@1.5.2 | MIT | deps: 3 | versions: 66</strong> <br />
+Clean up user-submitted HTML, preserving whitelisted elements and whitelisted attributes on a per-element basis</p>
+<p><a href="http://sendgrid.com">sendgrid</a> <br />
+<strong>sendgrid@2.0.0 | MIT | deps: 4 | versions: 100</strong> <br />
+Official SendGrid NodeJS library.</p>
+<p><a href="https://github.com/expressjs/serve-favicon">serve-favicon</a> <br />
+<strong>serve-favicon@2.2.0 | MIT | deps: 4 | versions: 21</strong> <br />
+favicon serving middleware with caching</p>
+<p><a href="https://github.com/dylang/shortid">shortid</a> <br />
+<strong>shortid@2.2.6 | MIT | deps: none | versions: 29</strong> <br />
+Amazingly short non-sequential url-friendly unique id generator.</p>
+<p><a href="https://github.com/erisds/showdown">showdown-ghost</a> <br />
+<strong>showdown-ghost@0.3.4 | Proprietary | deps: none | versions: 4</strong> <br />
+A JavaScript port of Markdown</p>
+<p><a href="https://github.com/Automattic/socket.io">socket.io</a> <br />
+<strong><a href="http://socket.io@1.2.1">socket.io@1.2.1</a> | MIT | deps: 6 | versions: 111</strong> <br />
+node.js realtime framework server</p>
+<p><a href="https://github.com/dbashford/textract">textract</a> <br />
+<strong>textract@2.4.0 | MIT | deps: 14 | versions: 45</strong> <br />
+Extracting text from files of various type including html, pdf, doc, docx, xls, xlsx, csv, pptx, png, jpg, gif, rtf, text/*, and various open office.</p>
+<p><a href="https://github.com/mishoo/UglifyJS2/tree/harmony">uglify-es</a> <br />
+<strong>uglify-es@3.3.9 | BSD-2-Clause | deps: 2 | versions: 50</strong> <br />
+JavaScript parser, mangler/compressor and beautifier toolkit for ES6+</p>
+<p><a href="https://github.com/watson-developer-cloud/node-sdk#readme">watson-developer-cloud</a> <br />
+<strong>watson-developer-cloud@3.12.0 | Apache-2.0 | deps: 18 | versions: 203</strong> <br />
+Client library to use the IBM Watson Services and AlchemyAPI</p>
+<p><a href="http://lodash.com/">lodash</a> <br />
+<strong>lodash@2.4.1 | MIT | deps: none | versions: 104</strong> <br />
+A utility library delivering consistency, customization, performance, &amp; extras.</p>
+<p><a href="http://momentjs.com">moment</a> <br />
+<strong>moment@2.8.4 | MIT | deps: none | versions: 61</strong> <br />
+Parse, manipulate, and display dates.</p>
+<p><a href="http://mongoosejs.com">mongoose</a> <br />
+<strong>mongoose@4.13.7 | MIT | deps: 13 | versions: 493</strong> <br />
+Mongoose MongoDB ODM</p>
+<p><a href="http://nodemon.io">nodemon</a> <br />
+<strong>nodemon@1.18.7 | MIT | deps: 10 | versions: 200</strong> <br />
+Simple monitor script for use during development of a node.js app.</p>
+<p><a href="http://passportjs.org/">passport</a> <br />
+<strong>passport@0.2.1 | MIT | deps: 2 | versions: 26</strong> <br />
+Simple, unobtrusive authentication for Node.js.</p>
+<p><a href="http://llllll.li/randomColor/">randomcolor</a> <br />
+<strong>randomcolor@0.4.4 | MIT | deps: none | versions: 12</strong> <br />
+For generating attractive random colors</p>
+<p><a href="http://github.com/dylang/node-rss">rss</a> <br />
+<strong>rss@1.1.1 | MIT | deps: 2 | versions: 17</strong> <br />
+RSS feed generator. Add RSS feeds to any project. Supports enclosures and GeoRSS.</p>
+<p><a href="http://pid.github.io/speakingurl/">speakingurl</a> <br />
+<strong>speakingurl@0.20.0 | BSD-3-Clause | deps: none | versions: 79</strong> <br />
+Generate a slug – transliteration with a lot of options</p>
+<p><a href="http://github.com/chriso/validator.js">validator</a> <br />
+<strong>validator@3.27.0 | MIT | deps: none | versions: 193</strong> <br />
+String validation and sanitization</p>
+<p><a href="http://github.com/dylang/node-xml">xml</a> <br />
+<strong>xml@1.0.0 | MIT | deps: none | versions: 11</strong> <br />
+Fast and simple xml generator. Supports attributes, CDATA, etc. Includes tests and examples.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/chi-td/docs/api"><span class="arrow-prev">← </span><span>Endpoints</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/chi-td/" class="nav-home"><img src="/chi-td/img/logo-black.png" alt="CHI" width="66" height="58"/></a><div><h5>Docs</h5><a href="/chi-td/docs/en/guide.html">Getting Started (or other categories)</a><a href="/chi-td/docs/en/doc2.html">Guides (or other categories)</a><a href="/chi-td/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/chi-td/en/users.html">User Showcase</a><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/chi-td/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://code.facebook.com/projects/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/chi-td/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div></body></html>
