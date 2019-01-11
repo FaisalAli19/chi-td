@@ -182,16 +182,35 @@
 </code></pre>
 <ul>
 <li><code>app/models</code>: contains all the schemas.</li>
-<li><code>app/api.js</code>: contains all the endpoints.</li>
-<li><code>docs/.vuepress/theme</code>: Used to store local theme.</li>
-<li><code>docs/.vuepress/styles</code>: Stores style related files.</li>
-<li><code>docs/.vuepress/styles/index.styl</code>: Automatically applied global style files, generated at the ending of the CSS file, have a higher priority than the default style.</li>
-<li><code>docs/.vuepress/styles/palette.styl</code>: The palette is used to override the default color constants and to set the color constants of Stylus.</li>
-<li><code>docs/.vuepress/public</code>: Static resource directory.</li>
-<li><code>docs/.vuepress/templates</code>: Store HTML template files.</li>
-<li><code>docs/.vuepress/templates/dev.html</code>: HTML template file for development environment.</li>
-<li><code>docs/.vuepress/templates/ssr.html</code>: Vue SSR based HTML template file in the built time.</li>
-<li><code>docs/.vuepress/config.js</code>: Entry file of configuration, can also be <code>yml</code> or <code>toml</code>.</li>
-<li><code>docs/.vuepress/enhanceApp.js</code>: App level enhancement.</li>
+<li><code>app/api.js</code>: contains all the api endpoints.</li>
+<li><code>app/nlu.js</code>: contains the functions for sentiment, tones and emotions analysis.</li>
+<li><code>app/routes.js</code>: contains the application routes.</li>
+<li><code>app/utility.js</code>: contains common utility functions like upload_file, get_cropped_image, etc.</li>
+<li><code>config/auth.js</code>: contains auth credentials.</li>
+<li><code>config/database.js</code>: contains database configurations.</li>
+<li><code>config/mail.js</code>: contains sendOneMail function to send an email using sendgrid.</li>
+<li><code>config/passport.js</code>: contains passport authentication code.</li>
+<li><code>email_templates/*</code>: contains different email templates like course_invite.html, password_changed.html, etc.</li>
+<li><code>log/app.log</code>: contains application logs.</li>
+<li><code>static/css/lib</code>: contains all the css libraries like sweetalert.css, chosen.css, etc.</li>
+<li><code>static/css/*</code>: contains all the styles and themes.</li>
+<li><code>static/images/*</code>: contains all the images used in the application.</li>
+<li><code>static/js/data</code>: contains country_data.csv for the geo chart in dashboard.</li>
+<li><code>static/js/lib</code>: contains all the js libraries like sweetalert.js, backbone.js, etc.</li>
+<li><code>static/js/editor.js</code>: contains CKEDITOR functions to edit and add rich text styles.</li>
+<li><code>static/js/global.js</code>: contains the global functions used across the application.</li>
+<li><code>static/js/helpers.js</code>: contains the handlebars helper functions.</li>
+<li><code>static/js/loadTemplate.js</code>: contains the functions to load and compile handlebar templates.</li>
+<li><code>static/js/loginApp.js</code>: contains the functions to support user login.</li>
+<li><code>static/js/mainApp.js</code>: contains the functions for rendering templates with data after user login.</li>
+<li><code>static/templates/*</code>: contains the handlebar templates.</li>
+<li><code>static/manifest.json</code>: contains the files that need to be cached for offline functionalitys.</li>
+<li><code>static/sw.js</code>: contains the functions related to service worker.</li>
+<li><code>views/app/index.hbs</code>: Barebone structure for the application after login.</li>
+<li><code>views/site/index.hbs</code>: Barebone structure for the application before login.</li>
+<li><code>views/site/reset.hbs</code>: Barebone structure to reset password.</li>
+<li><code>.env</code>: contains all the environment variables.</li>
+<li><code>server.js</code>: contains the code for setting up express server.</li>
+<li><code>package.json</code>: contains all the packages list and scripts to start or watch the server.</li>
 </ul>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/chi-td/docs/getting-started"><span class="arrow-prev">← </span><span>Getting Started</span></a><a class="docs-next button" href="/chi-td/docs/routes"><span>Routes</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 MGIEP</section></footer></div></body></html>
