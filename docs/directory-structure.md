@@ -160,14 +160,33 @@ CHI
 ```
 
 - `app/models`: contains all the schemas.
-- `app/api.js`: contains all the endpoints.
-- `docs/.vuepress/theme`: Used to store local theme.
-- `docs/.vuepress/styles`: Stores style related files.
-- `docs/.vuepress/styles/index.styl`: Automatically applied global style files, generated at the ending of the CSS file, have a higher priority than the default style.
-- `docs/.vuepress/styles/palette.styl`: The palette is used to override the default color constants and to set the color constants of Stylus.
-- `docs/.vuepress/public`: Static resource directory.
-- `docs/.vuepress/templates`: Store HTML template files.
-- `docs/.vuepress/templates/dev.html`: HTML template file for development environment.
-- `docs/.vuepress/templates/ssr.html`: Vue SSR based HTML template file in the built time.
-- `docs/.vuepress/config.js`: Entry file of configuration, can also be `yml` or `toml`.
-- `docs/.vuepress/enhanceApp.js`: App level enhancement.
+- `app/api.js`: contains all the api endpoints.
+- `app/nlu.js`: contains the functions for sentiment, tones and emotions analysis.
+- `app/routes.js`: contains the application routes.
+- `app/utility.js`: contains common utility functions like upload_file, get_cropped_image, etc.
+- `config/auth.js`: contains auth credentials.
+- `config/database.js`: contains database configurations.
+- `config/mail.js`: contains sendOneMail function to send an email using sendgrid.
+- `config/passport.js`: contains passport authentication code.
+- `email_templates/*`: contains different email templates like course_invite.html, password_changed.html, etc.
+- `log/app.log`: contains application logs.
+- `static/css/lib`: contains all the css libraries like sweetalert.css, chosen.css, etc.
+- `static/css/*`: contains all the styles and themes.
+- `static/images/*`: contains all the images used in the application.
+- `static/js/data`: contains country_data.csv for the geo chart in dashboard.
+- `static/js/lib`: contains all the js libraries like sweetalert.js, backbone.js, etc.
+- `static/js/editor.js`: contains CKEDITOR functions to edit and add rich text styles.
+- `static/js/global.js`: contains the global functions used across the application.
+- `static/js/helpers.js`: contains the handlebars helper functions.
+- `static/js/loadTemplate.js`: contains the functions to load and compile handlebar templates.
+- `static/js/loginApp.js`: contains the functions to support user login.
+- `static/js/mainApp.js`: contains the functions for rendering templates with data after user login.
+- `static/templates/*`: contains the handlebar templates.
+- `static/manifest.json`: contains the files that need to be cached for offline functionalitys.
+- `static/sw.js`: contains the functions related to service worker.
+- `views/app/index.hbs`: Barebone structure for the application after login.
+- `views/site/index.hbs`: Barebone structure for the application before login.
+- `views/site/reset.hbs`: Barebone structure to reset password.
+- `.env`: contains all the environment variables.
+- `server.js`: contains the code for setting up express server.
+- `package.json`: contains all the packages list and scripts to start or watch the server.
