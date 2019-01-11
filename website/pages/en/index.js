@@ -64,7 +64,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle siteConfig={siteConfig} />
           <p
             style={{
-              width: "700px",
+              maxWidth: "700px",
               margin: "0 auto 20px",
               color: "#007c89"
             }}

@@ -1,10 +1,8 @@
 ---
-id: functionality
-title: Functionality
-sidebar_label: Functionality
+id: auth
+title: Authentication
+sidebar_label: Authentication
 ---
-
-## Authentication
 
 Authentication is the process of recognizing a user’s identity. It is the mechanism of associating an incoming request with a set of identifying credentials. The credentials provided are compared to those on a file in a database of the authorized user’s information on a local operating system or within an authentication server.
 
@@ -88,12 +86,3 @@ passport.use(new GoogleStrategy({
 ```
 
 In this file, we return the output from Passport’s GoogleStrategy based on the result.
-![alt-text](/chi-td/img/CHI-Scheme-Flow.png)
-
-## Courses
-
-## Discussion
-
-## AI (Artificial intelligence)
-
-CHI application uses Watson natural-language-understanding and Watson tone analyzer to collect the sentiment and emotional data of the user, who have submitted

@@ -1,7 +1,7 @@
 ---
 id: best-practices
-title: Production Best Practices (Security)
-sidebar_label: Production Best Practices (Security)
+title: Best Practices
+sidebar_label: Best Practices
 ---
 
 ### Uses safe version of Express

@@ -6,7 +6,14 @@
       "directory-structure",
       "routes"
     ],
-    "Implementation": ["code-flow", "functionality", "best-practices"],
+    "Implementation": [
+      "code-flow",
+      "db-schema",
+      "auth",
+      "building-blocks",
+      "nlu",
+      "best-practices"
+    ],
     "API": ["api"],
     "Packages": ["packages"]
   }

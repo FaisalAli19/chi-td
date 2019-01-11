@@ -159,8 +159,8 @@ CHI
 └── package.json
 ```
 
-- `docs/.vuepress`: It is used to store global configuration, components, static resources, etc.
-- `docs/.vuepress/components`: The Vue components in this directory will be automatically registered as global components.
+- `app/models`: contains all the schemas.
+- `app/api.js`: contains all the endpoints.
 - `docs/.vuepress/theme`: Used to store local theme.
 - `docs/.vuepress/styles`: Stores style related files.
 - `docs/.vuepress/styles/index.styl`: Automatically applied global style files, generated at the ending of the CSS file, have a higher priority than the default style.
@@ -171,9 +171,3 @@ CHI
 - `docs/.vuepress/templates/ssr.html`: Vue SSR based HTML template file in the built time.
 - `docs/.vuepress/config.js`: Entry file of configuration, can also be `yml` or `toml`.
 - `docs/.vuepress/enhanceApp.js`: App level enhancement.
-
-**Also see:**
-
-- [Config](../config/README.md)
-- [Theme](../theme/README.md)
-- [Default Theme Config](../theme/default-theme-config.md)
