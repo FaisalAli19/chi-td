@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: "CHI", // Title for your website.
-  tagline: "CHI",
+  tagline: "Collective Human Intelligence",
   url: "https://faisalali19.github.io/", // Your website URL
   baseUrl: "/chi-td/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
