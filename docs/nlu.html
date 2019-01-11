@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>NLU (Natural Language Understanding) · CHI</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://console.bluemix.net/registration/&quot;&gt;IBM Cloud Account&lt;/a&gt; required.&lt;/p&gt;
+&lt;/blockquote&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="NLU (Natural Language Understanding) · CHI"/><meta property="og:type" content="website"/><meta property="og:url" content="https://faisalali19.github.io//chi-td/index.html"/><meta property="og:description" content="&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://console.bluemix.net/registration/&quot;&gt;IBM Cloud Account&lt;/a&gt; required.&lt;/p&gt;
+&lt;/blockquote&gt;
+"/><meta property="og:image" content="https://faisalali19.github.io//chi-td/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://faisalali19.github.io//chi-td/img/docusaurus.png"/><link rel="shortcut icon" href="/chi-td/img/logo-black.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/chi-td/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/chi-td/"><img class="logo" src="/chi-td/img/logo-black.png" alt="CHI"/><h2 class="headerTitleWithLogo">CHI</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/chi-td/docs/introduction" target="_self">Guide</a></li><li class="siteNavGroupActive"><a href="/chi-td/docs/api" target="_self">API</a></li><li class=""><a href="/chi-td/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Implementation</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Guide</h3><ul><li class="navListItem"><a class="navItem" href="/chi-td/docs/introduction">Introduction</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/directory-structure">Directory Structure</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/routes">Routes</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Implementation</h3><ul><li class="navListItem"><a class="navItem" href="/chi-td/docs/code-flow">Stack</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/db-schema">DB Schema</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/auth">Authentication</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/building-blocks">Building Blocks</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/chi-td/docs/nlu">NLU</a></li><li class="navListItem"><a class="navItem" href="/chi-td/docs/best-practices">Best Practices</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API</h3><ul><li class="navListItem"><a class="navItem" href="/chi-td/docs/api">Endpoints</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Packages</h3><ul><li class="navListItem"><a class="navItem" href="/chi-td/docs/packages">Libraries</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">NLU (Natural Language Understanding)</h1></header><article><div><span><blockquote>
+<p><a href="https://console.bluemix.net/registration/">IBM Cloud Account</a> required.</p>
+</blockquote>
+<p>CHI application uses Watson natural-language-understanding and Watson tone analyzer to collect the sentiment and emotions data of the user responses. (refer sample example below)</p>
+<p><strong>User Response</strong></p>
+<pre><code class="hljs">'Love <span class="hljs-keyword">is</span> composed <span class="hljs-keyword">of</span> a single soul inhabiting two bodies. – Aristotle This <span class="hljs-keyword">is</span> love: <span class="hljs-keyword">to</span> fly towards a secret sky, <span class="hljs-keyword">to</span> cause a hundred veils <span class="hljs-keyword">to</span> fall each moment. First <span class="hljs-keyword">to</span> let go <span class="hljs-keyword">of</span> life. Finally, <span class="hljs-keyword">to</span> take a step <span class="hljs-keyword">without</span> feet. – Rumi Can miles truly separate you <span class="hljs-keyword">from</span> friends… If you want <span class="hljs-keyword">to</span> be <span class="hljs-keyword">with</span> someone you love, aren’t you already there? – Richard Bach'
+</code></pre>
+<p><strong>Sentiment, tones and Emotions Data</strong></p>
+<pre><code class="hljs css language-json">sentiment: {"score": 0.945921, "label": "positive"}
+emotions: {"sadness": 0.148826, "joy": 0.707453, "fear": 0.015879, "disgust": 0.033806, "anger": 0.115122}
+tones: {"confident": 0.712295}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sentiment-and-emotions-data-using-watson-natural-language-understanding"></a><a href="#sentiment-and-emotions-data-using-watson-natural-language-understanding" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sentiment and Emotions Data using Watson natural-language-understanding</h3>
+<p>Watson Natural Language Understanding is a collection of APIs that offer text analysis through natural language processing. This set of APIs can analyze text to help you understand its concepts, entities, keywords, sentiment, and more.</p>
+<p><strong>Following will help to get your API credientials</strong></p>
+<ul>
+<li>Go to the <a href="https://console.bluemix.net/catalog/services/natural-language-understanding">Natural Language Understanding</a> page in the IBM Cloud Catalog.</li>
+<li>Log in to your IBM Cloud account.</li>
+<li>Click Create.</li>
+<li>Click Show to view the service credentials.</li>
+<li>Copy the apikey value, or copy the username and password values if your service instance doesn't provide an apikey.</li>
+<li>Copy the url value.</li>
+</ul>
+<p>Once you receive the API credientials set the same to NLU_ID and NLU_PASSWORD in .env file.</p>
+<pre><code class="hljs"><span class="hljs-keyword">const</span> NaturalLanguageUnderstandingV1 = require(<span class="hljs-string">"watson-developer-cloud/natural-language-understanding/v1.js"</span>);
+
+<span class="hljs-keyword">const</span> natural_language_understanding = <span class="hljs-keyword">new</span> NaturalLanguageUnderstandingV1({
+  url: <span class="hljs-string">"https://gateway.watsonplatform.net/natural-language-understanding/api"</span>,
+  username: <span class="hljs-built_in">process</span>.env.NLU_ID,
+  password: <span class="hljs-built_in">process</span>.env.NLU_PASSWORD,
+  version_date: <span class="hljs-string">"2018-03-16"</span>
+});
+</code></pre>
+<p>In the above code we are calling the Watson NaturalLanguageUnderstandingV1 with the credentials and saving it to varibale natural_language_understanding.</p>
+<pre><code class="hljs"> <span class="hljs-attr">const</span> <span class="hljs-string">parameters = {</span>
+    <span class="hljs-attr">text</span>: <span class="hljs-string">text,</span>
+    <span class="hljs-attr">features</span>: <span class="hljs-string">{</span>
+      <span class="hljs-attr">emotion</span>: <span class="hljs-string">{},</span>
+      <span class="hljs-attr">entities</span>: <span class="hljs-string">{</span>
+        <span class="hljs-attr">sentiment</span>: <span class="hljs-string">true,</span>
+        <span class="hljs-attr">limit</span>: <span class="hljs-string">1</span>
+      <span class="hljs-attr">},</span>
+      <span class="hljs-attr">sentiment</span>: <span class="hljs-string">{}</span>
+    <span class="hljs-attr">}</span>
+  <span class="hljs-attr">};</span>
+
+<span class="hljs-meta">natural_language_understanding.analyze(parameters,</span> <span class="hljs-string">(err, response) =&gt; {</span>
+    <span class="hljs-attr">if</span> <span class="hljs-string">(err) console.log("Sentiment error:", err);</span>
+    <span class="hljs-attr">else</span> <span class="hljs-string">{</span>
+      <span class="hljs-attr">sentiment</span> = <span class="hljs-string">response.sentiment.document;</span>
+      <span class="hljs-attr">emotions</span> = <span class="hljs-string">response.emotion.document.emotion;</span>
+            <span class="hljs-attr">NLU.save({</span>
+                <span class="hljs-attr">sentiment,</span>
+                <span class="hljs-attr">emotions</span>
+            <span class="hljs-attr">})</span>
+    <span class="hljs-attr">}</span>
+  <span class="hljs-attr">});</span>
+</code></pre>
+<p>In the above code, we have created the params object and we pass the user response as text with sentiment entity set to true to get the sentiment analysis of the user response from the Watson NLU API. We store the received response in NLU collection.</p>
+<h3><a class="anchor" aria-hidden="true" id="tone-data-using-watson-tone-analyzer"></a><a href="#tone-data-using-watson-tone-analyzer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tone Data using Watson tone-analyzer</h3>
+<p>The IBM Watson Tone Analyzer service is a cognitive linguistic analysis service that detects 7 tones which are most commonly used to detect the tone of written text. These are: anger, fear, joy, sadness, confident, analytical, and tentative.</p>
+<p><strong>Following will help to get your API credientials</strong></p>
+<ul>
+<li>Create an instance of the Tone Analyzer service and get your credentials:</li>
+<li>Go to the <a href="https://console.bluemix.net/catalog/services/tone-analyzer">Tone Analyzer</a> page in the IBM Cloud Catalog.</li>
+<li>Log in to your IBM Cloud account.</li>
+<li>Click Create.</li>
+<li>Click Show to view the service credentials.</li>
+<li>Copy the apikey value, or copy the username and password values if your service instance doesn't provide an apikey.</li>
+<li>Copy the url value.</li>
+</ul>
+<p>Once you receive the API credientials set the same to TONE_ANALYZER_ID and TONE_ANALYZER_PASSWORD in .env file.</p>
+<pre><code class="hljs"><span class="hljs-keyword">const</span> ToneAnalyzerV3 = require(<span class="hljs-string">"watson-developer-cloud/tone-analyzer/v3"</span>);
+
+<span class="hljs-comment">// Initializing watson tone analyzer api</span>
+<span class="hljs-keyword">const</span> tone_analyzer = <span class="hljs-keyword">new</span> ToneAnalyzerV3({
+  username: <span class="hljs-built_in">process</span>.env.TONE_ANALYZER_ID,
+  password: <span class="hljs-built_in">process</span>.env.TONE_ANALYZER_PASSWORD,
+  version_date: <span class="hljs-string">"2017-09-21"</span>,
+  url: <span class="hljs-string">"https://gateway.watsonplatform.net/tone-analyzer/api"</span>
+});
+</code></pre>
+<p>In the above code we are calling the Watson ToneAnalyzerV3 with the credentials and saving it to varibale tone_analyzer.</p>
+<pre><code class="hljs">const params = {
+    tone_input: { <span class="hljs-type">text</span>: <span class="hljs-type">text</span> },
+    content_type: "application/json"
+  };
+
+tone_analyzer.tone(params, (error, response) =&gt; {
+        // <span class="hljs-keyword">if</span> error console <span class="hljs-keyword">log</span> error
+        <span class="hljs-keyword">if</span> (error) console.log("Tone error:", error);
+        // <span class="hljs-keyword">else</span> <span class="hljs-keyword">add</span> the response <span class="hljs-keyword">to</span> tone varibale <span class="hljs-keyword">and</span> <span class="hljs-keyword">create</span> a <span class="hljs-built_in">new</span> nlu collection
+        <span class="hljs-keyword">else</span> {
+          // Declaring empty <span class="hljs-keyword">object</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">add</span> different tone <span class="hljs-keyword">as</span> a key <span class="hljs-keyword">and</span> score <span class="hljs-keyword">as</span> a <span class="hljs-keyword">value</span>
+          const tones = {};
+          // Saving data <span class="hljs-keyword">to</span> <span class="hljs-keyword">temp</span> varibale
+          const <span class="hljs-keyword">temp</span> = response.document_tone.tones;
+          // <span class="hljs-keyword">get</span> <span class="hljs-keyword">only</span> specified tones
+          const allowedTones = ["Analytical", "Tentative", "Confident"];
+          <span class="hljs-keyword">temp</span>.<span class="hljs-keyword">forEach</span>(({ tone_id, tone_name, score }) =&gt; {
+            <span class="hljs-keyword">if</span> (allowedTones.indexOf(tone_name) != <span class="hljs-number">-1</span>) {
+              tones[tone_id] = score;
+            }
+          });
+        }
+      });
+</code></pre>
+<p>In the above code, we have created the params object and we pass it to the tone function of the tone_analyser. We store the received response in the NLU collection.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/chi-td/docs/building-blocks"><span class="arrow-prev">← </span><span>Building Blocks</span></a><a class="docs-next button" href="/chi-td/docs/best-practices"><span>Best Practices</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 MGIEP</section></footer></div></body></html>
