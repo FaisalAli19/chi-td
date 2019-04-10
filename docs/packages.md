@@ -208,10 +208,6 @@ Extracting text from files of various type including html, pdf, doc, docx, xls, 
 **uglify-es@3.3.9 | BSD-2-Clause | deps: 2 | versions: 50** <br />
 JavaScript parser, mangler/compressor and beautifier toolkit for ES6+
 
-[watson-developer-cloud](https://github.com/watson-developer-cloud/node-sdk#readme) <br />
-**watson-developer-cloud@3.12.0 | Apache-2.0 | deps: 18 | versions: 203** <br />
-Client library to use the IBM Watson Services and AlchemyAPI
-
 [lodash](http://lodash.com/) <br />
 **lodash@2.4.1 | MIT | deps: none | versions: 104** <br />
 A utility library delivering consistency, customization, performance, & extras.
